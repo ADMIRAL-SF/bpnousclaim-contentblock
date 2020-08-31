@@ -27,7 +27,7 @@ let saveData = () => {
     sdk.setData(mapData, (data) => {
         // mapData = data;
         var content = '<p style="padding:10px;background-color:#00ff00;color:#fff;">%%[ ';
-        content += 'set @amount = ' + mapData.amount;
+        content += 'set @amount = "' + mapData.amount + '"';
         content += ']%%</p>';
 
         /*`%%[set @Description = 'test' set @Name = 'test2']%%
