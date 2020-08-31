@@ -10,7 +10,7 @@ let mapData = {
     sku: ''
 };
 
-let defaultContent = '<img src="https://image.s10.sfmc-content.com/lib/fe3b15707564047a7d1573/m/1/59a1e816-d94f-4672-888c-018b41d8db52.jpg" style="display:block;width:255px;float:left;color:#000;"><p style="padding-top:10px;"><b>Name</b><br><i>Description</i><br><br><span style="font-size:18px;font-weight:bold;">Price</span><br><span style="background-color:#00a1f4; border: 10px solid #00a1f4; color:#ffffff; font-size:16px;margin-top:10px;display:inline-block;">Button</span></p>';
+let defaultContent = 'DEFAULT';
 
 let saveData = () => {
     console.log('Saving data...');
@@ -19,7 +19,7 @@ let saveData = () => {
 
     sdk.setData(mapData, (data) => {
         // mapData = data;
-        let content = `%%[set @Description = 'test' set @Name = 'test2']%%
+        let content = 'NEW' /*`%%[set @Description = 'test' set @Name = 'test2']%%
 <tr>
   <td align="center" valign="top" >
     <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -63,7 +63,7 @@ let saveData = () => {
       </tr>
     </table>
   </td>
-</tr>`;
+</tr>` */;
         let superContent = defaultContent;
 
 
