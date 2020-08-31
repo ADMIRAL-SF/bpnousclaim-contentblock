@@ -26,7 +26,7 @@ let saveData = () => {
 
     sdk.setData(mapData, (data) => {
         // mapData = data;
-        let content = '<p style="padding-top:10px;background-color:#00ff00;color:#fff;"><b>NEW</b></p>'/*`%%[set @Description = 'test' set @Name = 'test2']%%
+        let content = '<p style="padding-top:10px;background-color:#00ff00;color:#fff;"><b> mapData.sku'+mapData.sku+'</b></p>'/*`%%[set @Description = 'test' set @Name = 'test2']%%
 <tr>
   <td align="center" valign="top" >
     <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
