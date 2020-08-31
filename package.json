@@ -1,13 +1,13 @@
 {
     "name": "blocksdk",
     "version": "1.0.1",
-    "description": "Product Catalogue for Marketing Cloud",
+    "description": "Bonus Claim Settings for Marketing Cloud",
     "repository": {
         "type": "git",
-        "url": "https://github.com/brunnebbudler/heroku-productcatalogue.git"
+        "url": "https://github.com/sh-pers/admiralv2"
     },
     "main": "blocksdk.js",
-    "author": "Stefan Brunnengräber",
+    "author": "Sandra Huett",
     "license": "BSD-3-Clause",
     "scripts": {
         "start": "node index.js"
