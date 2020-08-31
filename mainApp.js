@@ -19,7 +19,7 @@ let saveData = () => {
 
     sdk.setData(mapData, (data) => {
         // mapData = data;
-        let content = `%%[set @RowSet = LookupRows('yopede_product_catalogue','SKU','${mapData.sku}') set @RowCount = RowCount(@RowSet) if @RowCount > 0 then set @row = Row(@RowSet, 1) set @SKU = Field(@row, 'SKU') set @Name = Field(@row, 'Name')  set @Description = Field(@row, 'Description') set @Image = Field(@row, 'Image') set @Link = Field(@row, 'Link') set @Price = Field(@row, 'Price') endif]%%
+        let content = `%%[set @RowSet = LookupRows('yopede_product_catalogue','SKU','${mapData.sku}') set @RowCount = RowCount(@RowSet) if @RowCount > 0 then set @row = Row(@RowSet, 1) set @SKU = Field(@row, 'SKU') set @Name = Field(@row, 'Name')  set @Description = Field(@row, 'Description') set @Image = Field(@row, 'Image') set @Link = Field(@row, 'Link') set @Price = Field(@row, 'Price') endif set @Description = 'test']%%
 <tr>
   <td align="center" valign="top" >
     <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
