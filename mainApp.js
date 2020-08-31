@@ -14,7 +14,7 @@ sdk.setContent(content, function (setContent) {
 
 
 let mapData = {
-    sku: ''
+    amount: ''
 };
 
 let defaultContent = '<p style="padding-top:10px;background-color:#ff0000;color:#fff;"><b>DEFAULT</b></p>';
@@ -22,11 +22,11 @@ let defaultContent = '<p style="padding-top:10px;background-color:#ff0000;color:
 let saveData = () => {
     console.log('Saving data...');
 
-    mapData.sku = document.getElementById('sku').value;
+    mapData.amount = document.getElementById('amount').value;
 
     sdk.setData(mapData, (data) => {
         // mapData = data;
-        let content = '<p style="padding-top:10px;background-color:#00ff00;color:#fff;"><b> mapData.sku'+mapData.sku+'</b></p>'/*`%%[set @Description = 'test' set @Name = 'test2']%%
+        let content = '<p style="padding-top:10px;background-color:#00ff00;color:#fff;"><b> mapData.amount'+mapData.amount+'</b></p>'/*`%%[set @Description = 'test' set @Name = 'test2']%%
 <tr>
   <td align="center" valign="top" >
     <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -98,7 +98,7 @@ let fetchData = () => {
         if (Object.keys(data).length > 0) {
             mapData = data;
 
-            document.getElementById('sku').value = mapData.sku;
+            document.getElementById('amount').value = mapData.amount;
             console.log('Found data!');
         }
     });
