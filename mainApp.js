@@ -26,7 +26,7 @@ let saveData = () => {
 
     sdk.setData(mapData, (data) => {
         // mapData = data;
-        let content = '<p style="padding:10px;background-color:#00ff00;color:#fff;">%%[ ';
+        var content = '<p style="padding:10px;background-color:#00ff00;color:#fff;">%%[ ';
         content += 'set @amount = ' + mapData.amount;
         content += ']%%</p>';
 
