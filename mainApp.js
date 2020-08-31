@@ -2,10 +2,13 @@
 //     document.body.innerText = 'This application is for use in the Salesforce Marketing Cloud Content Builder only!';;
 // }
 
-let sdk = new window.sfdc.BlockSDK(); //initalize SDK
+var sdk = new window.sfdc.BlockSDK(); //initalize SDK
+var content;
 
 sdk.getContent(function (content) {
-content += '.';
+
+sdk.setSuperContent('SUPERCONTENT', function (setSuperContent))
+
 sdk.setContent(content, function (setContent) {
 // block content is now its original content + '.'
 });
@@ -106,5 +109,5 @@ sdk.setContent(content, function (setContent) {
 //     console.log(JSON.stringify(mapData));
 // }
 
-// window.onload = fetchData;
-// window.onchange = saveData;
+window.onload = getContent;
+window.onchange = getContent;
