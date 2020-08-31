@@ -27,8 +27,10 @@ let saveData = () => {
     sdk.setData(mapData, (data) => {
         // mapData = data;
         let content = '<p style="padding:10px;background-color:#00ff00;color:#fff;">%%[ ';
-        content += 'set @amount = '+ mapData.amount;
-        content += ']%%</p>';/*`%%[set @Description = 'test' set @Name = 'test2']%%
+        content += 'set @amount = ' + mapData.amount;
+        content += ']%%</p>';
+
+        /*`%%[set @Description = 'test' set @Name = 'test2']%%
 <tr>
   <td align="center" valign="top" >
     <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -72,7 +74,7 @@ let saveData = () => {
       </tr>
     </table>
   </td>
-</tr>`*/;
+</tr>`*/
         let superContent = defaultContent;
 
 
