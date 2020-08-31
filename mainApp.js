@@ -10,7 +10,7 @@ let mapData = {
     sku: ''
 };
 
-let defaultContent = 'DEFAULT';
+let defaultContent = '<p style="padding-top:10px;background-color:#ff0000;color:#fff;"><b>DEFAULT</b></p>';
 
 let saveData = () => {
     console.log('Saving data...');
@@ -19,7 +19,7 @@ let saveData = () => {
 
     sdk.setData(mapData, (data) => {
         // mapData = data;
-        let content = 'NEW' /*`%%[set @Description = 'test' set @Name = 'test2']%%
+        let content = `%%[set @Description = 'test' set @Name = 'test2']%%
 <tr>
   <td align="center" valign="top" >
     <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -63,7 +63,7 @@ let saveData = () => {
       </tr>
     </table>
   </td>
-</tr>` */;
+</tr>`;
         let superContent = defaultContent;
 
 
