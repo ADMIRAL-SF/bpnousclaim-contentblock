@@ -79,9 +79,9 @@ let saveData = () => {
 
 
         //check for ampscript
-        // if (content.search('%%') === -1) {
-        //      superContent = content;
-        //  }
+         if (content.search('%%') === -1) {
+              superContent = content;
+          }
 
         console.log('content: ' + content);
 
