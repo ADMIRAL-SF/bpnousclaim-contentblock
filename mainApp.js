@@ -14,11 +14,25 @@ let saveData = () => {
     console.log('Saving data...');
 
     mapData.amount = document.getElementById('amount').value;
+    mapData.ticket_type = document.getElementById('ticket_type').value;
+    mapData.external_promotion = document.getElementById('external_promotion').value;
+    mapData.external_promotion_id = document.getElementById('external_promotion_id').value;
+    mapData.issuance_period = document.getElementById('issuance_period').value;
+    mapData.redemption_period = document.getElementById('redemption_period').value;
+    mapData.ticket_text_part_1 = document.getElementById('ticket_text_part_1').value;
+    mapData.ticket_text_part_2 = document.getElementById('ticket_text_part_2').value;
 
     sdk.setData(mapData, (data) => {
         // mapData = data;
         var content = '%%[ ';
         content += 'set @amount = "' + mapData.amount + '"';
+        content += 'set @ticket_type = "' + mapData.ticket_type + '"';
+        content += 'set @external_promotion = "' + mapData.external_promotion + '"';
+        content += 'set @external_promotion_id = "' + mapData.external_promotion_id + '"';
+        content += 'set @issuance_period = "' + mapData.issuance_period + '"';
+        content += 'set @redemption_period = "' + mapData.redemption_period + '"';
+        content += 'set @ticket_text_part_1 = "' + mapData.ticket_text_part_1 + '"';
+        content += 'set @ticket_text_part_2 = "' + mapData.ticket_text_part_2 + '"';
         content += ']%%';
 
         /*`%%[set @Description = 'test' set @Name = 'test2']%%
