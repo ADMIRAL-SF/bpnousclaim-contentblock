@@ -108,6 +108,13 @@ let fetchData = () => {
             mapData = data;
 
             document.getElementById('amount').value = mapData.amount;
+            document.getElementById('ticket_type').value = mapData.ticket_type;
+            document.getElementById('external_promotion').value = mapData.external_promotion;
+            document.getElementById('external_promotion_id').value = mapData.external_promotion_id;
+            document.getElementById('issuance_period').value = mapData.issuance_period;
+            document.getElementById('redemption_period').value = mapData.redemption_period;
+            document.getElementById('ticket_text_part_1').value = mapData.ticket_text_part_1;
+            document.getElementById('ticket_text_part_2').value = mapData.ticket_text_part_2;
             console.log('Found data!');
         }
     });
