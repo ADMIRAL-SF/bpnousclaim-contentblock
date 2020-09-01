@@ -4,20 +4,11 @@
 
 let sdk = new window.sfdc.BlockSDK(); //initalize SDK
 
-/*sdk.getContent(function (content) {
-content += '.';
-sdk.setContent(content, function (setContent) {
-// block content is now its original content + '.'
-});
-});*/
-
-
-
 let mapData = {
     amount: ''
 };
 
-let defaultContent = '<p style="padding-top:10px;background-color:#ff0000;color:#fff;"><b>DEFAULT</b></p>';
+let defaultContent = '<p style="padding-top:10px;background-color:#ff0000;color:#fff;"><b>Click to update Bonus Claim Information</b></p>';
 
 let saveData = () => {
     console.log('Saving data...');
@@ -26,9 +17,9 @@ let saveData = () => {
 
     sdk.setData(mapData, (data) => {
         // mapData = data;
-        var content = '<p style="padding:10px;background-color:#00ff00;color:#fff;">%%[ ';
+        var content = '%%[ ';
         content += 'set @amount = "' + mapData.amount + '"';
-        content += ']%%</p>';
+        content += ']%%';
 
         /*`%%[set @Description = 'test' set @Name = 'test2']%%
 <tr>
