@@ -37,8 +37,8 @@ let saveData = () => {
         content += 'set @ticket_text_part_2 = "' + mapData.ticket_text_part_2 + '"';
 
         content += ']%%';
-        Write('monday value: '+mapData.monday_i + '<br>');
-        Write('time value: '+mapData.time_i + '<br>');
+        console.log('monday value: '+mapData.monday_i);
+        console.log('time value: '+mapData.time_i);
 
         /*`%%[set @Description = 'test' set @Name = 'test2']%%
 <tr>
@@ -120,6 +120,8 @@ let fetchData = () => {
             document.getElementById('redemption_period').value = mapData.redemption_period;
             document.getElementById('ticket_text_part_1').value = mapData.ticket_text_part_1;
             document.getElementById('ticket_text_part_2').value = mapData.ticket_text_part_2;
+            document.getElementById('monday_i').value = mapData.monday_i;
+            document.getElementById('time_i').value = mapData.time_i;
             console.log('Found data!');
         }
     });
