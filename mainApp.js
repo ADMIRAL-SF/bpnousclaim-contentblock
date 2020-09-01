@@ -22,22 +22,24 @@ let saveData = () => {
     mapData.ticket_text_part_1 = document.getElementById('ticket_text_part_1').value;
     mapData.ticket_text_part_2 = document.getElementById('ticket_text_part_2').value;
     mapData.monday_i = document.getElementById('monday_i').value;
+    mapData.tuesday_i = document.getElementById('tuesday_i').value;
     mapData.time_i = document.getElementById('time_i').value;
 
     sdk.setData(mapData, (data) => {
         // mapData = data;
         var content = '%%[ ';
-        content += 'set @amount = "' + mapData.amount + '"';
-        content += 'set @ticket_type = "' + mapData.ticket_type + '"';
-        content += 'set @external_promotion = "' + mapData.external_promotion + '"';
-        content += 'set @external_promotion_id = "' + mapData.external_promotion_id + '"';
-        content += 'set @issuance_period = "' + mapData.issuance_period + '"';
-        content += 'set @redemption_period = "' + mapData.redemption_period + '"';
-        content += 'set @ticket_text_part_1 = "' + mapData.ticket_text_part_1 + '"';
-        content += 'set @ticket_text_part_2 = "' + mapData.ticket_text_part_2 + '"';
+        content += 'set @amount = "' + mapData.amount + '" ';
+        content += 'set @ticket_type = "' + mapData.ticket_type + '" ';
+        content += 'set @external_promotion = "' + mapData.external_promotion + '" ';
+        content += 'set @external_promotion_id = "' + mapData.external_promotion_id + '" ';
+        content += 'set @issuance_period = "' + mapData.issuance_period + '" ';
+        content += 'set @redemption_period = "' + mapData.redemption_period + '" ';
+        content += 'set @ticket_text_part_1 = "' + mapData.ticket_text_part_1 + '" ';
+        content += 'set @ticket_text_part_2 = "' + mapData.ticket_text_part_2 + '" ';
 
         content += ']%%';
         console.log('monday value: '+mapData.monday_i);
+        console.log('tuesday value: '+mapData.tuesday_i);
         console.log('time value: '+mapData.time_i);
 
         /*`%%[set @Description = 'test' set @Name = 'test2']%%
