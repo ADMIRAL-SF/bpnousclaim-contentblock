@@ -27,38 +27,54 @@
                         <div class="form-group">
                             <label class="col-sm-4 control-label" for="amount">Bonus Amount</label>
                             <div class="col-sm-4">
-                                 <input type="text" id="amount" name="amount" placeholder="e.g. 1000">
+                                 <input type="text" id="amount" name="amount" placeholder="1000">
+                                 <small class="form-text text-muted">
+                                  Ticket Amount in Cents
+                                 </small>
                             </div>
                             <label class="col-sm-4 control-label" for="ticket_type">Ticket Type</label>
                             <div class="col-sm-4">
-                                <select class="js-example-basic-single" name="ticket_type" id="ticket_type" >
+                                <select class="form-control" name="ticket_type" id="ticket_type" >
                                     <option value="promo_ticket" selected>Promo Ticket</option>
                                     <option value="cashable_ticket">Cashable Ticket</option>
                                 </select>
                             </div>
                             <label class="col-sm-4 control-label" for="external_promotion">Promotion Name</label>
                             <div class="col-sm-4">
-                                 <input type="text" id="external_promotion" name="external_promotion" placeholder="e.g. Super Bonus">
+                                 <input type="text" id="external_promotion" name="external_promotion" placeholder="Super Bonus">
                             </div>
                             <label class="col-sm-4 control-label" for="external_promotion_id">Promotion ID</label>
                             <div class="col-sm-4">
-                                 <input type="text" id="external_promotion_id" name="external_promotion_id" placeholder="e.g. 1237">
+                                 <input type="text" id="external_promotion_id" name="external_promotion_id" placeholder="1237">
                             </div>
+
                             <label class="col-sm-4 control-label" for="issuance_period">Issuance Period</label>
                             <div class="col-sm-4">
-                                 <input type="text" id="issuance_period" name="issuance_period" placeholder="e.g. 5 (in days)">
+                                 <input type="text" id="issuance_period" name="issuance_period" placeholder="5">
+                                 <small class="form-text text-muted">
+                                  Bonus Expiration Period (days since the bonus is registered in myACP until the promotional ticket must be printed at a shop before this bonus expires)
+                                 </small>
                             </div>
                             <label class="col-sm-4 control-label" for="redemption_period">Redemption Period</label>
                             <div class="col-sm-4">
-                                 <input type="text" id="redemption_period" name="redemption_period" placeholder="e.g. 14 (in days)">
+                                 <input type="text" id="redemption_period" name="redemption_period" placeholder="14">
+                                 <small class="form-text text-muted">
+                                  Ticket Redemption Period (given in number of days counted from issuance of the ticket)
+                                 </small>
                             </div>
                             <label class="col-sm-4 control-label" for="ticket_text_part_1">Ticket Text Part 1</label>
                             <div class="col-sm-4">
-                                 <input type="text" id="ticket_text_part_1" name="ticket_text_part_1" placeholder="Text to be printed on the ticket below the location name on the left">
+                                 <input type="text" id="ticket_text_part_1" name="ticket_text_part_1" placeholder="">
+                                 <small class="form-text text-muted">
+                                  Text to be printed on the ticket below the location name on the left
+                                 </small>
                             </div>
                             <label class="col-sm-4 control-label" for="ticket_text_part_2">Ticket Text Part 2</label>
                             <div class="col-sm-4">
-                                 <input type="text" id="ticket_text_part_2" name="ticket_text_part_2" placeholder="Text to be printed on the ticket below the location name on the right">
+                                 <input type="text" id="ticket_text_part_2" name="ticket_text_part_2" placeholder="">
+                                 <small class="form-text text-muted">
+                                  Text to be printed on the ticket below the location name on the right
+                                 </small>
                             </div>
                         </div>
                     </div>
