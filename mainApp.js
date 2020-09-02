@@ -204,6 +204,7 @@ let fetchData = () => {
             document.getElementById('ticket_text_part_1').value = mapData.ticket_text_part_1;
             document.getElementById('ticket_text_part_2').value = mapData.ticket_text_part_2;
 
+            document.getElementById('issuance_schedule').value = mapData.issucance;
             document.getElementById('monday_i').value = mapData.monday_i;
             document.getElementById('tuesday_i').value = mapData.tuesday_i;
             document.getElementById('wednesday_i').value = mapData.wednesday_i;
@@ -214,6 +215,7 @@ let fetchData = () => {
             document.getElementById('timefrom_i').value = mapData.timefrom_i;
             document.getElementById('timeto_i').value = mapData.timeto_i;
 
+            document.getElementById('redemption_schedule').value = mapData.redemption;
             document.getElementById('monday_r').value = mapData.monday_r;
             document.getElementById('tuesday_r').value = mapData.tuesday_r;
             document.getElementById('wednesday_r').value = mapData.wednesday_r;
