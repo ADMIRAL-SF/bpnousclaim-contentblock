@@ -115,8 +115,8 @@ let saveData = () => {
         }
 
         if (mapData.availability == true) {
-            content += 'set @regions = "' + mapData.regions + '" ';
-            content += 'set @locations = "' + mapData.locations + '" ';
+            content += 'set @availability_regions = "' + mapData.regions + '" ';
+            content += 'set @availability_locations = "' + mapData.locations + '" ';
         }
 
 
