@@ -14,8 +14,36 @@ $(document).ready(function() {
 			console.log(value);						
 			issuanceSettings.addClass('hidden'); //hide everything and reveal as needed
 			
-			if (value == 'true'){
+			if (value == true){
 				issuanceSettings.removeClass('hidden'); //show feedback_bad					
+			}
+		});	
+
+    var redemption = $('#redemption_schedule');
+
+    var redemptionSettings = $('#redemption_options');
+
+    redemption.change(function(){ //when the rating changes
+			var value= this.checked;
+			console.log(value);						
+			redemptionSettings.addClass('hidden'); //hide everything and reveal as needed
+			
+			if (value == true){
+				redemptionSettings.removeClass('hidden'); //show feedback_bad					
+			}
+		});	
+
+    var availability = $('#availability');
+
+    var availabilitySettings = $('#availability_options');
+
+    availability.change(function(){ //when the rating changes
+			var value= this.checked;
+			console.log(value);						
+			availabilitySettings.addClass('hidden'); //hide everything and reveal as needed
+			
+			if (value == true){
+				availabilitySettings.removeClass('hidden'); //show feedback_bad					
 			}
 		});	
 });

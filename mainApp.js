@@ -21,9 +21,32 @@ let saveData = () => {
     mapData.redemption_period = document.getElementById('redemption_period').value;
     mapData.ticket_text_part_1 = document.getElementById('ticket_text_part_1').value;
     mapData.ticket_text_part_2 = document.getElementById('ticket_text_part_2').value;
+
+    mapData.issuance = document.getElementById('issuance_schedule').checked;
     mapData.monday_i = document.getElementById('monday_i').checked;
     mapData.tuesday_i = document.getElementById('tuesday_i').checked;
+    mapData.wednesday_i = document.getElementById('wednesday_i').checked;
+    mapData.thursday_i = document.getElementById('thursday_i').checked;
+    mapData.friday_i = document.getElementById('friday_i').checked;
+    mapData.saturday_i = document.getElementById('saturday_i').checked;
+    mapData.sunday_i = document.getElementById('sunday_i').checked;
     mapData.timefrom_i = document.getElementById('timefrom_i').value;
+    mapData.timeto_i = document.getElementById('timeto_i').value;
+
+    mapData.redemption = document.getElementById('redemption_schedule').checked;
+    mapData.monday_r = document.getElementById('monday_r').checked;
+    mapData.tuesday_r = document.getElementById('tuesday_r').checked;
+    mapData.wednesday_r = document.getElementById('wednesday_r').checked;
+    mapData.thursday_r = document.getElementById('thursday_r').checked;
+    mapData.friday_r = document.getElementById('friday_r').checked;
+    mapData.saturday_r = document.getElementById('saturday_r').checked;
+    mapData.sunday_r = document.getElementById('sunday_r').checked;
+    mapData.timefrom_r = document.getElementById('timefrom_r').value;
+    mapData.timeto_r = document.getElementById('timeto_r').value;
+
+    mapData.availability = document.getElementById('availability').checked;
+    mapData.regions = document.getElementById('regions').value;
+    mapData.locations = document.getElementById('locations').value;
 
     sdk.setData(mapData, (data) => {
         // mapData = data;
@@ -36,6 +59,65 @@ let saveData = () => {
         content += 'set @redemption_period = "' + mapData.redemption_period + '" ';
         content += 'set @ticket_text_part_1 = "' + mapData.ticket_text_part_1 + '" ';
         content += 'set @ticket_text_part_2 = "' + mapData.ticket_text_part_2 + '" ';
+
+        if (mapData.issuance == true) {
+            content += 'set @timefrom_i = "' + mapData.timefrom_i + '" ';
+            content += 'set @timeto_i = "' + mapData.timeto_i + '" ';
+
+            if (mapData.monday_i == true) {
+                content += 'set @monday_i = "true" ';
+            }
+            if (mapData.tuesday_i == true) {
+                content += 'set @tuesday_i = "true" ';
+            }
+            if (mapData.wednesday_i == true) {
+                content += 'set @wednesday_i = "true" ';
+            }
+            if (mapData.thursday_i == true) {
+                content += 'set @thursday_i = "true" ';
+            }
+            if (mapData.friday_i == true) {
+                content += 'set @friday_i = "true" ';
+            }
+            if (mapData.saturday_i == true) {
+                content += 'set @saturday_i = "true" ';
+            }
+            if (mapData.sunday_i == true) {
+                content += 'set @sunday_i = "true" ';
+            }
+        }
+
+        if (mapData.redemption == true) {
+            content += 'set @timefrom_r = "' + mapData.timefrom_r + '" ';
+            content += 'set @timeto_r = "' + mapData.timeto_r + '" ';
+            
+            if (mapData.monday_r == true) {
+                content += 'set @monday_r = "true" ';
+            }
+            if (mapData.tuesday_r == true) {
+                content += 'set @tuesday_r = "true" ';
+            }
+            if (mapData.wednesday_r == true) {
+                content += 'set @wednesday_r = "true" ';
+            }
+            if (mapData.thursday_r == true) {
+                content += 'set @thursday_r = "true" ';
+            }
+            if (mapData.friday_r == true) {
+                content += 'set @friday_r = "true" ';
+            }
+            if (mapData.saturday_r == true) {
+                content += 'set @saturday_r = "true" ';
+            }
+            if (mapData.sunday_r == true) {
+                content += 'set @sunday_r = "true" ';
+            }
+        }
+
+        if (mapData.availability == true) {
+            content += 'set @regions = "' + mapData.regions + '" ';
+            content += 'set @locations = "' + mapData.locations + '" ';
+        }
 
 
 
@@ -121,8 +203,31 @@ let fetchData = () => {
             document.getElementById('redemption_period').value = mapData.redemption_period;
             document.getElementById('ticket_text_part_1').value = mapData.ticket_text_part_1;
             document.getElementById('ticket_text_part_2').value = mapData.ticket_text_part_2;
+
             document.getElementById('monday_i').value = mapData.monday_i;
+            document.getElementById('tuesday_i').value = mapData.tuesday_i;
+            document.getElementById('wednesday_i').value = mapData.wednesday_i;
+            document.getElementById('thursday_i').value = mapData.thursday_i;
+            document.getElementById('friday_i').value = mapData.friday_i;
+            document.getElementById('saturday_i').value = mapData.saturday_i;
+            document.getElementById('sunday_i').value = mapData.sunday_i;
             document.getElementById('timefrom_i').value = mapData.timefrom_i;
+            document.getElementById('timeto_i').value = mapData.timeto_i;
+
+            document.getElementById('monday_r').value = mapData.monday_r;
+            document.getElementById('tuesday_r').value = mapData.tuesday_r;
+            document.getElementById('wednesday_r').value = mapData.wednesday_r;
+            document.getElementById('thursday_r').value = mapData.thursday_r;
+            document.getElementById('friday_r').value = mapData.friday_r;
+            document.getElementById('saturday_r').value = mapData.saturday_r;
+            document.getElementById('sunday_r').value = mapData.sunday_r;
+            document.getElementById('timefrom_r').value = mapData.timefrom_r;
+            document.getElementById('timeto_r').value = mapData.timeto_r;
+
+            document.getElementById('availability').value = mapData.availability;
+            document.getElementById('regions').value = mapData.regions;
+            document.getElementById('locations').value = mapData.locations;
+
             console.log('Found data!');
         }
     });
