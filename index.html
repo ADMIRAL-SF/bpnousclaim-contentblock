@@ -16,12 +16,17 @@
         <div class="container">
             <form class="form-horizontal">
                 <fieldset>
-                    <div class="slds-panel slds-size_medium slds-panel_docked slds-panel_docked-left slds-is-open" aria-hidden="false">
-                      <div class="slds-panel__header">
-                        <h2 class="slds-panel__header-title slds-text-heading_small slds-truncate" title="Panel Header">Bonus Claim Settings</h2>
-                      </div>
-                      <div class="slds-panel__body">Please set up your promotion information below.</div>
-                    </div>
+                    <div class="slds-card__header slds-grid">
+    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+      <div class="slds-media__body">
+        <h2>
+            <span class="slds-text-heading_large">Bonus Claim Settings</span>
+          
+        </h2>
+      </div>
+    </header>
+  </div>
+  <div class="slds-card__body slds-card__body_inner">
                     <div class="slds-form-element">
                         <label class="slds-form-element__label" for="amount">
                         <abbr class="slds-required" title="required">* </abbr>Bonus Amount</label>
@@ -48,152 +53,302 @@
                             <input type="text" id="external_promotion" name="external_promotion" required="" class="slds-input" />
                         </div>
                     </div>
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label" for="external_promotion_id">
+                        <abbr class="slds-required" title="required">* </abbr>Promotion ID</label>
+                        <div class="slds-form-element__control">
+                            <input type="text" id="external_promotion_id" name="external_promotion_id" required="" class="slds-input" />
+                        </div>
+                    </div>
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label" for="issuance_period">
+                        Issuance Period</label>
+                        <div class="slds-form-element__control">
+                            <input type="text" id="issuance_period" name="issuance_period" class="slds-input" />
+                        </div>
+                    </div>
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label" for="redemption_period">
+                        Redemption Period</label>
+                        <div class="slds-form-element__control">
+                            <input type="text" id="redemption_period" name="redemption_period" class="slds-input" />
+                        </div>
+                    </div>
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label" for="ticket_text_part_1">
+                        Ticket Text Part 1</label>
+                        <div class="slds-form-element__control">
+                            <input type="text" id="ticket_text_part_1" name="ticket_text_part_1" class="slds-input" />
+                        </div>
+                    </div>
+                    <div class="slds-form-element slds-p-bottom_large">
+                        <label class="slds-form-element__label" for="ticket_text_part_2">
+                        Ticket Text Part 2</label>
+                        <div class="slds-form-element__control">
+                            <input type="text" id="ticket_text_part_2" name="ticket_text_part_2" class="slds-input" />
+                        </div>
+                    </div>
+                    <div class="slds-form-element slds-p-bottom_medium">
+                    <h2>
+                        <span class="slds-text-heading_medium ">Schedules</span>
+                      
+                    </h2>
+                    </div>
+                    <div class=" slds-form-element">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="issuance_schedule" id="issuance_schedule" />
+                          <label class="slds-checkbox__label" for="issuance_schedule">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Issuance Schedule</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-p-left_large hidden" id="issuance_options">
+                        <div class="slds-form-element">
+                          <div class="slds-form-element__control">
+                            <div class="slds-checkbox">
+                              <input type="checkbox" name="monday_i" id="monday_i" />
+                              <label class="slds-checkbox__label" for="monday_i">
+                                <span class="slds-checkbox_faux"></span>
+                                <span class="slds-form-element__label">Monday</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div> 
+                        <div class="slds-form-element">
+                          <div class="slds-form-element__control">
+                            <div class="slds-checkbox">
+                              <input type="checkbox" name="tuesday_i" id="tuesday_i" />
+                              <label class="slds-checkbox__label" for="tuesday_i">
+                                <span class="slds-checkbox_faux"></span>
+                                <span class="slds-form-element__label">Tuesday</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="slds-form-element">
+                          <div class="slds-form-element__control">
+                            <div class="slds-checkbox">
+                              <input type="checkbox" name="wednesday_i" id="wednesday_i" />
+                              <label class="slds-checkbox__label" for="wednesday_i">
+                                <span class="slds-checkbox_faux"></span>
+                                <span class="slds-form-element__label">Wednesday</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="slds-form-element">
+                          <div class="slds-form-element__control">
+                            <div class="slds-checkbox">
+                              <input type="checkbox" name="thursday_i" id="thursday_i" />
+                              <label class="slds-checkbox__label" for="thursday_i">
+                                <span class="slds-checkbox_faux"></span>
+                                <span class="slds-form-element__label">Thursday</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div> 
+                        <div class="slds-form-element">
+                          <div class="slds-form-element__control">
+                            <div class="slds-checkbox">
+                              <input type="checkbox" name="friday_i" id="friday_i" />
+                              <label class="slds-checkbox__label" for="friday_i">
+                                <span class="slds-checkbox_faux"></span>
+                                <span class="slds-form-element__label">Friday</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div> 
+                        <div class="slds-form-element">
+                          <div class="slds-form-element__control">
+                            <div class="slds-checkbox">
+                              <input type="checkbox" name="saturday_i" id="saturday_i" />
+                              <label class="slds-checkbox__label" for="saturday_i">
+                                <span class="slds-checkbox_faux"></span>
+                                <span class="slds-form-element__label">Saturday</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div> 
+                        <div class="slds-form-element">
+                          <div class="slds-form-element__control">
+                            <div class="slds-checkbox">
+                              <input type="checkbox" name="sunday_i" id="sunday_i" />
+                              <label class="slds-checkbox__label" for="sunday_i">
+                                <span class="slds-checkbox_faux"></span>
+                                <span class="slds-form-element__label">Sunday</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="timefrom_i">
+                            From</label>
+                            <div class="slds-form-element__control">
+                                <input type="time" id="timefrom_i" name="timefrom_i" class="slds-input" value="00:00" />
+                            </div>
+                        </div>
+                        <div class="slds-form-element slds-p-bottom_medium">
+                            <label class="slds-form-element__label" for="timeto_i">
+                            To</label>
+                            <div class="slds-form-element__control">
+                                <input type="time" id="timeto_i" name="timeto_i" class="slds-input" value="23:59" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" slds-form-element">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="redemption_schedule" id="redemption_schedule" />
+                          <label class="slds-checkbox__label" for="redemption_schedule">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Redemption Schedule</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-p-left_large hidden" id="redemption_options">
+                        <div class="slds-form-element">
+                          <div class="slds-form-element__control">
+                            <div class="slds-checkbox">
+                              <input type="checkbox" name="monday_r" id="monday_r" />
+                              <label class="slds-checkbox__label" for="monday_r">
+                                <span class="slds-checkbox_faux"></span>
+                                <span class="slds-form-element__label">Monday</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div> 
+                        <div class="slds-form-element">
+                          <div class="slds-form-element__control">
+                            <div class="slds-checkbox">
+                              <input type="checkbox" name="tuesday_r" id="tuesday_r" />
+                              <label class="slds-checkbox__label" for="tuesday_r">
+                                <span class="slds-checkbox_faux"></span>
+                                <span class="slds-form-element__label">Tuesday</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="slds-form-element">
+                          <div class="slds-form-element__control">
+                            <div class="slds-checkbox">
+                              <input type="checkbox" name="wednesday_r" id="wednesday_r" />
+                              <label class="slds-checkbox__label" for="wednesday_r">
+                                <span class="slds-checkbox_faux"></span>
+                                <span class="slds-form-element__label">Wednesday</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="slds-form-element">
+                          <div class="slds-form-element__control">
+                            <div class="slds-checkbox">
+                              <input type="checkbox" name="thursday_r" id="thursday_r" />
+                              <label class="slds-checkbox__label" for="thursday_r">
+                                <span class="slds-checkbox_faux"></span>
+                                <span class="slds-form-element__label">Thursday</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div> 
+                        <div class="slds-form-element">
+                          <div class="slds-form-element__control">
+                            <div class="slds-checkbox">
+                              <input type="checkbox" name="friday_r" id="friday_r" />
+                              <label class="slds-checkbox__label" for="friday_r">
+                                <span class="slds-checkbox_faux"></span>
+                                <span class="slds-form-element__label">Friday</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div> 
+                        <div class="slds-form-element">
+                          <div class="slds-form-element__control">
+                            <div class="slds-checkbox">
+                              <input type="checkbox" name="saturday_r" id="saturday_r" />
+                              <label class="slds-checkbox__label" for="saturday_r">
+                                <span class="slds-checkbox_faux"></span>
+                                <span class="slds-form-element__label">Saturday</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div> 
+                        <div class="slds-form-element">
+                          <div class="slds-form-element__control">
+                            <div class="slds-checkbox">
+                              <input type="checkbox" name="sunday_r" id="sunday_r" />
+                              <label class="slds-checkbox__label" for="sunday_r">
+                                <span class="slds-checkbox_faux"></span>
+                                <span class="slds-form-element__label">Sunday</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="timefrom_r">
+                            From</label>
+                            <div class="slds-form-element__control">
+                                <input type="time" id="timefrom_r" name="timefrom_r" class="slds-input" value="00:00" />
+                            </div>
+                        </div>
+                        <div class="slds-form-element slds-p-bottom_medium">
+                            <label class="slds-form-element__label" for="timeto_r">
+                            To</label>
+                            <div class="slds-form-element__control">
+                                <input type="time" id="timeto_r" name="timeto_r" class="slds-input" value="23:59" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-form-element slds-p-bottom_medium slds-p-top_large">
+                    <h2>
+                        <span class="slds-text-heading_medium ">Regions & Locations</span>
+                      
+                    </h2>
+                    </div>
+                    <div class=" slds-form-element ">
+                      <div class="slds-form-element__control">
+                        <div class="slds-checkbox">
+                          <input type="checkbox" name="availability" id="availability" />
+                          <label class="slds-checkbox__label" for="availability">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Availability Options</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-p-left_large hidden" id="availability_options">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="regions">
+                            Regions</label>
+                            <div class="slds-form-element__icon">
+                              <button class="slds-button slds-button_icon" aria-describedby="help">
+                                <svg class="slds-button__icon" aria-hidden="true">
+                                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Help</span>
+                              </button>
+                              <div class="slds-popover slds-popover_tooltip slds-nubbin_bottom-left" role="tooltip" id="help" style="position:absolute;top:-45px;left:-15px;width:170px">
+                                <div class="slds-popover__body">Comma separated List of myACP region IDs</div>
+                              </div>
+                            </div>
+                            <div class="slds-form-element__control">
+                                <input type="text" id="regions" name="regions" class="slds-input" />
+                            </div>
+                        </div>
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="locations">
+                            Locations</label>
+                            <div class="slds-form-element__control">
+                                <input type="text" id="locations" name="locations" class="slds-input" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
                     <div class="row">
                         <div class="col-xs-12 col-sm-12">
-                            <div class="form-group">
-                                <label class="col-sm-12 control-label" for="amount">Bonus Amount</label>
-                                <div class="col-sm-12">
-                                    <input type="text" id="amount" name="amount">
-                                    <small class="form-text text-muted">
-                                    Ticket Amount in Cents
-                                    </small>
-                                </div>
-                                <label class="col-sm-12 control-label" for="ticket_type">Ticket Type</label>
-                                <div class="col-sm-12">
-                                    <select class="form-control" name="ticket_type" id="ticket_type" >
-                                        <option value="promo_ticket" selected>Promo Ticket</option>
-                                        <option value="cashable_ticket">Cashable Ticket</option>
-                                    </select>
-                                </div>
-                                <label class="col-sm-12 control-label" for="external_promotion">Promotion Name</label>
-                                <div class="col-sm-12">
-                                    <input type="text" id="external_promotion" name="external_promotion">
-                                </div>
-                                <label class="col-sm-12 control-label" for="external_promotion_id">Promotion ID</label>
-                                <div class="col-sm-12">
-                                    <input type="text" id="external_promotion_id" name="external_promotion_id">
-                                </div>
-                                <label class="col-sm-12 control-label" for="issuance_period">Issuance Period</label>
-                                <div class="col-sm-12">
-                                    <input type="text" id="issuance_period" name="issuance_period">
-                                    <small class="form-text text-muted"><br>
-                                    Bonus Expiration Period (days since the bonus is registered in myACP until the promotional ticket must be printed at a shop before this bonus expires)
-                                    </small>
-                                </div>
-                                <label class="col-sm-12 control-label" for="redemption_period">Redemption Period</label>
-                                <div class="col-sm-12">
-                                    <input type="text" id="redemption_period" name="redemption_period">
-                                    <small class="form-text text-muted"><br>
-                                    Ticket Redemption Period (given in number of days counted from issuance of the ticket)
-                                    </small>
-                                </div>
-                                <label class="col-sm-12 control-label" for="ticket_text_part_1">Ticket Text Part 1</label>
-                                <div class="col-sm-12">
-                                    <input type="text" id="ticket_text_part_1" name="ticket_text_part_1">
-                                    <small class="form-text text-muted"><br>
-                                    Text to be printed on the ticket below the location name on the left
-                                    </small>
-                                </div>
-                                <label class="col-sm-12 control-label" for="ticket_text_part_2">Ticket Text Part 2</label>
-                                <div class="col-sm-12">
-                                    <input type="text" id="ticket_text_part_2" name="ticket_text_part_2">
-                                    <small class="form-text text-muted"><br>
-                                    Text to be printed on the ticket below the location name on the right
-                                    </small>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-sm-12">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="issuance_schedule">
-                                        <label for="issuance_schedule">Issuance Schedule (optional)</label>
-                                    </div>
-                                    <div class="col-sm-12 form-group hidden" id="issuance_options">
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input " type="checkbox" id="monday_i" >
-                                            <label for="monday_i">Monday</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="tuesday_i" >
-                                            <label  for="tuesday_i">Tuesday</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="wednesday_i" >
-                                            <label  for="wednesday_i">Wednesday</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="thursday_i">
-                                            <label for="thursday_i">Thursday</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="friday_i">
-                                            <label for="friday_i">Friday</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="saturday_i">
-                                            <label  for="saturday_i">Saturday</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="sunday_i">
-                                            <label for="sunday_i">Sunday</label>
-                                        </div>
-                                        <label for="timefrom_i" class="col-2 col-form-label">From</label>
-                                        <div class="col-4">
-                                            <input class="form-control" type="time" value="00:00:00" id="timefrom_i">
-                                        </div>
-                                        <label for="timeto_i" class="col-2 col-form-label">To</label>
-                                        <div class="col-4">
-                                            <input class="form-control" type="time" value="23:59:00" id="timeto_i">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-sm-12">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="redemption_schedule">
-                                        <label for="redemption_schedule">Redemption Schedule (optional)</label>
-                                    </div>
-                                    <div class="col-sm-12 form-group hidden" id="redemption_options">
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input " type="checkbox" id="monday_r" >
-                                            <label for="monday_r">Monday</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="tuesday_r" >
-                                            <label  for="tuesday_r">Tuesday</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="wednesday_r" >
-                                            <label  for="wednesday_r">Wednesday</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="thursday_r">
-                                            <label for="thursday_r">Thursday</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="friday_r">
-                                            <label for="friday_r">Friday</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="saturday_r">
-                                            <label  for="saturday_r">Saturday</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="sunday_r">
-                                            <label for="sunday_r">Sunday</label>
-                                        </div>
-                                        <label for="timefrom_r" class="col-2 col-form-label">From</label>
-                                        <div class="col-4">
-                                            <input class="form-control" type="time" value="00:00:00" id="timefrom_r">
-                                        </div>
-                                        <label for="timeto_r" class="col-2 col-form-label">To</label>
-                                        <div class="col-4">
-                                            <input class="form-control" type="time" value="23:59:00" id="timeto_r">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="form-group">
                                 <div class="col-sm-12">
                                     <div class="form-check form-check-inline">

@@ -309,7 +309,7 @@ html{
   font-family:"Salesforce Sans", Arial, sans-serif;
   font-size:100%;
   line-height:1.5;
-  background:#b0c4df;
+  background:#F4F6F9;
   color:#080707;
   -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
 }
@@ -6376,7 +6376,8 @@ a.slds-button--inverse:focus{
   color:#3e3e3c;
   font-size:0.75rem;
   padding-right:0.5rem;
-  padding-top:0.25rem;
+  padding-top:1rem;
+  padding-bottom:0.25rem;
   margin-bottom:0.125rem;
 }
 .slds-form-element__label:empty{
