@@ -23,6 +23,10 @@ $(document).ready(function() {
 
     var redemptionSettings = $('#redemption_options');
 
+    if redemption.checked {
+    	redemptionSettings.removeClass('hidden');
+    }
+
     redemption.change(function(){ //when the rating changes
 			var value= this.checked;
 			console.log(value);						
