@@ -204,7 +204,7 @@ let fetchData = () => {
             document.getElementById('ticket_text_part_1').value = mapData.ticket_text_part_1;
             document.getElementById('ticket_text_part_2').value = mapData.ticket_text_part_2;
 
-            document.getElementById('issuance_schedule').checked = mapData.issucance;
+            document.getElementById('issuance_schedule').checked = mapData.issuance;
             document.getElementById('monday_i').checked = mapData.monday_i;
             document.getElementById('tuesday_i').checked = mapData.tuesday_i;
             document.getElementById('wednesday_i').checked = mapData.wednesday_i;
