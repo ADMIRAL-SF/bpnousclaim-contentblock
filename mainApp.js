@@ -204,14 +204,14 @@ let fetchData = () => {
             document.getElementById('ticket_text_part_1').value = mapData.ticket_text_part_1;
             document.getElementById('ticket_text_part_2').value = mapData.ticket_text_part_2;
 
-            document.getElementById('issuance_schedule').value = mapData.issucance;
-            document.getElementById('monday_i').value = mapData.monday_i;
-            document.getElementById('tuesday_i').value = mapData.tuesday_i;
-            document.getElementById('wednesday_i').value = mapData.wednesday_i;
-            document.getElementById('thursday_i').value = mapData.thursday_i;
-            document.getElementById('friday_i').value = mapData.friday_i;
-            document.getElementById('saturday_i').value = mapData.saturday_i;
-            document.getElementById('sunday_i').value = mapData.sunday_i;
+            document.getElementById('issuance_schedule').checked = mapData.issucance;
+            document.getElementById('monday_i').checked = mapData.monday_i;
+            document.getElementById('tuesday_i').checked = mapData.tuesday_i;
+            document.getElementById('wednesday_i').checked = mapData.wednesday_i;
+            document.getElementById('thursday_i').checked = mapData.thursday_i;
+            document.getElementById('friday_i').checked = mapData.friday_i;
+            document.getElementById('saturday_i').checked = mapData.saturday_i;
+            document.getElementById('sunday_i').checked = mapData.sunday_i;
             document.getElementById('timefrom_i').value = mapData.timefrom_i;
             document.getElementById('timeto_i').value = mapData.timeto_i;
 
