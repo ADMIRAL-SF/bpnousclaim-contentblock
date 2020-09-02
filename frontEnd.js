@@ -23,7 +23,7 @@ $(document).ready(function() {
 
     var redemptionSettings = $('#redemption_options');
 
-    if redemption.checked {
+    if ($('#redemption_schedule').is(':checked')) {
     	redemptionSettings.removeClass('hidden');
     }
 
