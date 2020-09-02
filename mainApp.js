@@ -23,7 +23,7 @@ let saveData = () => {
     mapData.ticket_text_part_2 = document.getElementById('ticket_text_part_2').value;
     mapData.monday_i = document.getElementById('monday_i').checked;
     mapData.tuesday_i = document.getElementById('tuesday_i').checked;
-    mapData.timefrom_i = document.getElementById('time_i').value;
+    mapData.timefrom_i = document.getElementById('timefrom_i').value;
 
     sdk.setData(mapData, (data) => {
         // mapData = data;
@@ -37,7 +37,7 @@ let saveData = () => {
         content += 'set @ticket_text_part_1 = "' + mapData.ticket_text_part_1 + '" ';
         content += 'set @ticket_text_part_2 = "' + mapData.ticket_text_part_2 + '" ';
 
-        
+
 
         content += ']%%';
 
