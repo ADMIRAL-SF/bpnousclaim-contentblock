@@ -14,7 +14,7 @@ $(document).ready(function() {
 			console.log(value);						
 			issuanceSettings.addClass('hidden'); //hide everything and reveal as needed
 			
-			if (value == 'on'){
+			if (value == 'true'){
 				issuanceSettings.removeClass('hidden'); //show feedback_bad					
 			}
 		});	
