@@ -215,18 +215,18 @@ let fetchData = () => {
             document.getElementById('timefrom_i').value = mapData.timefrom_i;
             document.getElementById('timeto_i').value = mapData.timeto_i;
 
-            document.getElementById('redemption_schedule').value = mapData.redemption;
-            document.getElementById('monday_r').value = mapData.monday_r;
-            document.getElementById('tuesday_r').value = mapData.tuesday_r;
-            document.getElementById('wednesday_r').value = mapData.wednesday_r;
-            document.getElementById('thursday_r').value = mapData.thursday_r;
-            document.getElementById('friday_r').value = mapData.friday_r;
-            document.getElementById('saturday_r').value = mapData.saturday_r;
-            document.getElementById('sunday_r').value = mapData.sunday_r;
+            document.getElementById('redemption_schedule').checked = mapData.redemption;
+            document.getElementById('monday_r').checked = mapData.monday_r;
+            document.getElementById('tuesday_r').checked = mapData.tuesday_r;
+            document.getElementById('wednesday_r').checked = mapData.wednesday_r;
+            document.getElementById('thursday_r').checked = mapData.thursday_r;
+            document.getElementById('friday_r').checked = mapData.friday_r;
+            document.getElementById('saturday_r').checked = mapData.saturday_r;
+            document.getElementById('sunday_r').checked = mapData.sunday_r;
             document.getElementById('timefrom_r').value = mapData.timefrom_r;
             document.getElementById('timeto_r').value = mapData.timeto_r;
 
-            document.getElementById('availability').value = mapData.availability;
+            document.getElementById('availability').checked = mapData.availability;
             document.getElementById('regions').value = mapData.regions;
             document.getElementById('locations').value = mapData.locations;
 
