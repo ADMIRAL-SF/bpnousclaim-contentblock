@@ -27,108 +27,116 @@
                         <div class="form-group">
                             <label class="col-sm-12 control-label" for="amount">Bonus Amount</label>
                             <div class="col-sm-12">
-                                 <input type="text" id="amount" name="amount" placeholder="1000">
-                                 <small class="form-text text-muted">
+                               <input type="text" id="amount" name="amount" placeholder="1000">
+                               <small class="form-text text-muted">
                                   Ticket Amount in Cents
-                                 </small>
-                            </div>
-                            <label class="col-sm-12 control-label" for="ticket_type">Ticket Type</label>
-                            <div class="col-sm-12">
-                                <select class="form-control" name="ticket_type" id="ticket_type" >
-                                    <option value="promo_ticket" selected>Promo Ticket</option>
-                                    <option value="cashable_ticket">Cashable Ticket</option>
-                                </select>
-                            </div>
-                            <label class="col-sm-12 control-label" for="external_promotion">Promotion Name</label>
-                            <div class="col-sm-12">
-                                 <input type="text" id="external_promotion" name="external_promotion" placeholder="Super Bonus">
-                            </div>
-                            <label class="col-sm-12 control-label" for="external_promotion_id">Promotion ID</label>
-                            <div class="col-sm-12">
-                                 <input type="text" id="external_promotion_id" name="external_promotion_id" placeholder="1237">
-                            </div>
-
-                            <label class="col-sm-12 control-label" for="issuance_period">Issuance Period</label>
-                            <div class="col-sm-12">
-                                 <input type="text" id="issuance_period" name="issuance_period" placeholder="5">
-                                 <small class="form-text text-muted"><br>
-                                  Bonus Expiration Period (days since the bonus is registered in myACP until the promotional ticket must be printed at a shop before this bonus expires)
-                                 </small>
-                            </div>
-                            <label class="col-sm-12 control-label" for="redemption_period">Redemption Period</label>
-                            <div class="col-sm-12">
-                                 <input type="text" id="redemption_period" name="redemption_period" placeholder="14">
-                                 <small class="form-text text-muted"><br>
-                                  Ticket Redemption Period (given in number of days counted from issuance of the ticket)
-                                 </small>
-                            </div>
-                            <label class="col-sm-12 control-label" for="ticket_text_part_1">Ticket Text Part 1</label>
-                            <div class="col-sm-12">
-                                 <input type="text" id="ticket_text_part_1" name="ticket_text_part_1" placeholder="">
-                                 <small class="form-text text-muted"><br>
-                                  Text to be printed on the ticket below the location name on the left
-                                 </small>
-                            </div>
-                            <label class="col-sm-12 control-label" for="ticket_text_part_2">Ticket Text Part 2</label>
-                            <div class="col-sm-12">
-                                 <input type="text" id="ticket_text_part_2" name="ticket_text_part_2" placeholder="">
-                                 <small class="form-text text-muted"><br>
-                                  Text to be printed on the ticket below the location name on the right
-                                 </small>
-                            </div>
+                              </small>
+                          </div>
+                          <label class="col-sm-12 control-label" for="ticket_type">Ticket Type</label>
+                          <div class="col-sm-12">
+                            <select class="form-control" name="ticket_type" id="ticket_type" >
+                                <option value="promo_ticket" selected>Promo Ticket</option>
+                                <option value="cashable_ticket">Cashable Ticket</option>
+                            </select>
                         </div>
-                        <div class="form-group">
-                            Issuance Schedule (optional)
-                            <div class="col-sm-12">
-                                Issuance Schedule (optional)
-                                 <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="checkbox" id="monday_i">
-                                  <label for="monday_i">Monday</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="checkbox" id="tuesday_i">
-                                  <label  for="tuesday_i">Tuesday</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="checkbox" id="wednesday_i" value="wednesday_i">
-                                  <label  for="wednesday_i">Wednesday</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="checkbox" id="thurday_i" value="thurday_i">
-                                  <label for="thurday_i">Thursday</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="checkbox" id="friday_i" value="friday_i">
-                                  <label for="friday_i">Friday</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="checkbox" id="saturday_i" value="saturday_i">
-                                  <label  for="saturday_i">Saturday</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="checkbox" id="sunday_i" value="sunday_i">
-                                  <label for="sunday_i">Sunday</label>
-                                </div>
-                                <label for="time_i" class="col-2 col-form-label">Time</label>
-                                  <div class="col-10">
-                                    <input class="form-control" type="time" value="13:45:00" id="time_i">
-                                  </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        <label class="col-sm-12 control-label" for="external_promotion">Promotion Name</label>
+                        <div class="col-sm-12">
+                           <input type="text" id="external_promotion" name="external_promotion" placeholder="Super Bonus">
+                       </div>
+                       <label class="col-sm-12 control-label" for="external_promotion_id">Promotion ID</label>
+                       <div class="col-sm-12">
+                           <input type="text" id="external_promotion_id" name="external_promotion_id" placeholder="1237">
+                       </div>
 
+                       <label class="col-sm-12 control-label" for="issuance_period">Issuance Period</label>
+                       <div class="col-sm-12">
+                           <input type="text" id="issuance_period" name="issuance_period" placeholder="5">
+                           <small class="form-text text-muted"><br>
+                              Bonus Expiration Period (days since the bonus is registered in myACP until the promotional ticket must be printed at a shop before this bonus expires)
+                          </small>
+                      </div>
+                      <label class="col-sm-12 control-label" for="redemption_period">Redemption Period</label>
+                      <div class="col-sm-12">
+                       <input type="text" id="redemption_period" name="redemption_period" placeholder="14">
+                       <small class="form-text text-muted"><br>
+                          Ticket Redemption Period (given in number of days counted from issuance of the ticket)
+                      </small>
+                  </div>
+                  <label class="col-sm-12 control-label" for="ticket_text_part_1">Ticket Text Part 1</label>
+                  <div class="col-sm-12">
+                   <input type="text" id="ticket_text_part_1" name="ticket_text_part_1" placeholder="">
+                   <small class="form-text text-muted"><br>
+                      Text to be printed on the ticket below the location name on the left
+                  </small>
+              </div>
+              <label class="col-sm-12 control-label" for="ticket_text_part_2">Ticket Text Part 2</label>
+              <div class="col-sm-12">
+               <input type="text" id="ticket_text_part_2" name="ticket_text_part_2" placeholder="">
+               <small class="form-text text-muted"><br>
+                  Text to be printed on the ticket below the location name on the right
+              </small>
+          </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-12">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="issuance_schedule">
+              <label for="issuance_schedule">Issuance Schedule (optional)</label>
+          </div>
+          <div class="form-group hidden" id="issuance_options">
+           <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="monday_i" checked>
+              <label for="monday_i">Monday</label>
+          </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="tuesday_i" checked>
+              <label  for="tuesday_i">Tuesday</label>
+          </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="wednesday_i" value="wednesday_i" checked>
+              <label  for="wednesday_i">Wednesday</label>
+          </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="thurday_i" value="thurday_i" checked>
+              <label for="thurday_i">Thursday</label>
+          </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="friday_i" value="friday_i" checked>
+              <label for="friday_i">Friday</label>
+          </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="saturday_i" value="saturday_i" checked>
+              <label  for="saturday_i">Saturday</label>
+          </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="sunday_i" value="sunday_i" checked>
+              <label for="sunday_i">Sunday</label>
+          </div>
+          <label for="timefrom_i" class="col-2 col-form-label">From</label>
+          <div class="col-10">
+            <input class="form-control" type="time" value="00:00:00" id="timefrom_i">
+        </div>
+        <label for="timeto_i" class="col-2 col-form-label">To</label>
+        <div class="col-10">
+            <input class="form-control" type="time" value="24:00:00" id="timeto_i">
+        </div>
     </div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
 
 
-    </fieldset>
-    </form>
+</fieldset>
+</form>
 
-    </div>
+</div>
 
-    <script src="blocksdk.js"></script>
-    <script src="mainApp.js"></script>
-    <script src="frontEnd.js"></script>
+<script src="blocksdk.js"></script>
+<script src="mainApp.js"></script>
+<script src="frontEnd.js"></script>
 
 
 

@@ -23,7 +23,7 @@ let saveData = () => {
     mapData.ticket_text_part_2 = document.getElementById('ticket_text_part_2').value;
     mapData.monday_i = document.getElementById('monday_i').checked;
     mapData.tuesday_i = document.getElementById('tuesday_i').checked;
-    mapData.time_i = document.getElementById('time_i').value;
+    mapData.timefrom_i = document.getElementById('time_i').value;
 
     sdk.setData(mapData, (data) => {
         // mapData = data;
@@ -37,10 +37,9 @@ let saveData = () => {
         content += 'set @ticket_text_part_1 = "' + mapData.ticket_text_part_1 + '" ';
         content += 'set @ticket_text_part_2 = "' + mapData.ticket_text_part_2 + '" ';
 
+        
+
         content += ']%%';
-        console.log('monday value: '+mapData.monday_i);
-        console.log('tuesday value: '+mapData.tuesday_i);
-        console.log('time value: '+mapData.time_i);
 
         /*`%%[set @Description = 'test' set @Name = 'test2']%%
 <tr>
@@ -123,7 +122,7 @@ let fetchData = () => {
             document.getElementById('ticket_text_part_1').value = mapData.ticket_text_part_1;
             document.getElementById('ticket_text_part_2').value = mapData.ticket_text_part_2;
             document.getElementById('monday_i').value = mapData.monday_i;
-            document.getElementById('time_i').value = mapData.time_i;
+            document.getElementById('timefrom_i').value = mapData.timefrom_i;
             console.log('Found data!');
         }
     });
