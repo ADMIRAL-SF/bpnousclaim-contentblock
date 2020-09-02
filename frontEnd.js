@@ -10,7 +10,8 @@ $(document).ready(function() {
     var issuanceSettings = $('#issuance_options');
 
     issuance.change(function(){ //when the rating changes
-			var value= this.checked;						
+			var value= this.checked;
+			console.log(value);						
 			issuanceSettings.addClass('hidden'); //hide everything and reveal as needed
 			
 			if (value == 'on'){
