@@ -31,7 +31,7 @@
                         <label class="slds-form-element__label" for="amount">
                         <abbr class="slds-required" title="required">* </abbr>Bonus Amount</label>
                         <div class="slds-form-element__control">
-                            <input type="text" id="amount" name="amount" required="" class="slds-input" />
+                            <input type="text" id="amount" name="amount" required="" class="slds-input" size="10" />
                         </div>
                     </div>
                     <div class="slds-form-element">
@@ -323,19 +323,8 @@
                         <div class="slds-form-element">
                             <label class="slds-form-element__label" for="regions">
                             Regions</label>
-                            <div class="slds-form-element__icon">
-                              <button class="slds-button slds-button_icon" aria-describedby="help">
-                                <svg class="slds-button__icon" aria-hidden="true">
-                                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
-                                </svg>
-                                <span class="slds-assistive-text">Help</span>
-                              </button>
-                              <div class="slds-popover slds-popover_tooltip slds-nubbin_bottom-left" role="tooltip" id="help" style="position:absolute;top:-45px;left:-15px;width:170px">
-                                <div class="slds-popover__body">Comma separated List of myACP region IDs</div>
-                              </div>
-                            </div>
                             <div class="slds-form-element__control">
-                                <input type="text" id="regions" name="regions" class="slds-input" />
+                                <input type="text" id="regions" name="regions" class="slds-input" /><div class="slds-form-element__help">Comma separated List of myACP Region IDs</div>
                             </div>
                         </div>
                         <div class="slds-form-element">
@@ -343,38 +332,11 @@
                             Locations</label>
                             <div class="slds-form-element__control">
                                 <input type="text" id="locations" name="locations" class="slds-input" />
+                                <div class="slds-form-element__help">Comma separated List of myACP Location IDs</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12">
-                            <div class="form-group">
-                                <div class="col-sm-12">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="availability">
-                                        <label for="availability">Availability (optional)</label>
-                                    </div>
-                                    <div class="col-sm-12 form-group hidden" id="availability_options">
-                                        <label class="col-sm-12 control-label" for="regions">Regions</label>
-                                        <div class="col-sm-12">
-                                            <input type="text" id="regions" name="regions" placeholder="">
-                                            <small class="form-text text-muted"><br>
-                                            Comma separated List of myACP region IDs
-                                            </small>
-                                        </div>
-                                        <label class="col-sm-12 control-label" for="locations">Locations</label>
-                                        <div class="col-sm-12">
-                                            <input type="text" id="locations" name="locations" placeholder="">
-                                            <small class="form-text text-muted"><br>
-                                            Comma separated List of myACP location IDs
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </fieldset>
             </form>
         </div>
