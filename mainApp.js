@@ -124,7 +124,7 @@ let saveData = () => {
 
         if (blockData.multiclaim == true) {
             content += 'set @multiclaim = "' + blockData.multiclaim + '" ';
-            content += 'set @multiClaimDuration = "' + blockData.multiclaimlock + '" ';
+            content += 'set @multiClaimDuration = "' + blockData.multiclaimlock * -1 + '" ';
         }
         else {
             content += 'set @multiclaim = "false" ';
