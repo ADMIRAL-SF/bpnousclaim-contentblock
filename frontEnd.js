@@ -50,4 +50,18 @@ $(document).ready(function() {
 				availabilitySettings.removeClass('hidden'); //show feedback_bad					
 			}
 		});	
+
+    var multiclaim = $('#multiclaim');
+
+    var multiclaimSettings = $('#multiclaim_options');
+
+    multiclaim.change(function(){ //when the rating changes
+			var value= this.checked;
+			console.log(value);						
+			multiclaimSettings.addClass('hidden'); //hide everything and reveal as needed
+			
+			if (value == true){
+				multiclaimSettings.removeClass('hidden'); //show feedback_bad					
+			}
+		});	
 });
