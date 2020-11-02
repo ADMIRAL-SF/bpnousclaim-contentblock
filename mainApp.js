@@ -48,6 +48,9 @@ let saveData = () => {
     blockData.regions = document.getElementById('regions').value;
     blockData.locations = document.getElementById('locations').value;
 
+    blockData.multiclaim = document.getElementById('multiclaim').checked;
+    blockData.multiclaimlock = document.getElementById('multiclaimlock').value;
+
     sdk.setData(blockData, (data) => {
         // blockData = data;
         var content = '%%[ ';
@@ -117,6 +120,14 @@ let saveData = () => {
         if (blockData.availability == true) {
             content += 'set @availability_regions = "' + blockData.regions + '" ';
             content += 'set @availability_locations = "' + blockData.locations + '" ';
+        }
+
+        if (blockData.multiclaim == true) {
+            content += 'set @multiclaim = "' + blockData.multiclaim + '" ';
+            content += 'set @multiClaimDuration = "' + blockData.multiclaimlock + '" ';
+        }
+        else {
+            content += 'set @multiclaim = "false" ';
         }
 
         content += ']%%';
