@@ -193,6 +193,9 @@ let fetchData = () => {
             document.getElementById('regions').value = blockData.regions;
             document.getElementById('locations').value = blockData.locations;
 
+            document.getElementById('multiclaim').checked = blockData.multiclaim;
+            document.getElementById('multiclaimlock').value = blockData.multiclaimlock;
+
             console.log('Found data!');
         }
     });
