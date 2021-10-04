@@ -21,6 +21,7 @@ let saveData = () => {
     blockData.redemption_period = document.getElementById('redemption_period').value;
     blockData.ticket_text_part_1 = document.getElementById('ticket_text_part_1').value;
     blockData.ticket_text_part_2 = document.getElementById('ticket_text_part_2').value;
+    blockData.target_de = document.getElementById('target_de').value;
 
     blockData.issuance = document.getElementById('issuance_schedule').checked;
     blockData.monday_i = document.getElementById('monday_i').checked;
@@ -62,6 +63,7 @@ let saveData = () => {
         content += 'set @redemption_period = "' + blockData.redemption_period + '" ';
         content += 'set @ticket_text_part_1 = "' + blockData.ticket_text_part_1 + '" ';
         content += 'set @ticket_text_part_2 = "' + blockData.ticket_text_part_2 + '" ';
+        content += 'set @targetDE = "' + blockData.target_de + '" ';
 
         if (blockData.issuance == true) {
             content += 'set @timefrom_i = "' + blockData.timefrom_i + '" ';
@@ -166,6 +168,7 @@ let fetchData = () => {
             document.getElementById('redemption_period').value = blockData.redemption_period;
             document.getElementById('ticket_text_part_1').value = blockData.ticket_text_part_1;
             document.getElementById('ticket_text_part_2').value = blockData.ticket_text_part_2;
+            document.getElementById('target_de').value = blockData.target_de;
 
             document.getElementById('issuance_schedule').checked = blockData.issuance;
             document.getElementById('monday_i').checked = blockData.monday_i;
