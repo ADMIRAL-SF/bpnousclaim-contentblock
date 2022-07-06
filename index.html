@@ -9,6 +9,22 @@
         <link href="salesforce-lightning-design-system-2.12.2/assets/styles/salesforce-lightning-design-system.css" rel="stylesheet" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+        <script>
+          $(function() {
+              $("#start_date").datepicker();
+              $("#start_date").datepicker("option", "dateFormat", "yy-mm-dd");
+          });
+
+          $(function() {
+              $("input[name='valid_duration']").on('input', function(e) {
+                  $(this).val($(this).val().replace(/[^0-9]/g, ''));
+              });
+          })
+
+        </script>
         <style type="text/css">
         </style>
     </head>
@@ -88,6 +104,20 @@
                             <input type="text" id="ticket_text_part_2" name="ticket_text_part_2" class="slds-input" />
                         </div>
                     </div>
+                    <div class="slds-form-element">
+                      <label class="slds-form-element__label" for="start_date">
+                      Start Date</label>
+                      <div class="slds-form-element__control">
+                          <input type="text" id="start_date" name="start_date" class="slds-input" />
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-p-bottom_large">
+                      <label class="slds-form-element__label" for="valid_duration">
+                      Validity Duration, days</label>
+                      <div class="slds-form-element__control">
+                          <input type="text" id="valid_duration" name="valid_duration" class="slds-input" />
+                      </div>
+                    </div>
                     <div class="slds-form-element slds-p-bottom_large">
                         <label class="slds-form-element__label" for="target_de">
                         Target Data Extension</label>
@@ -98,7 +128,6 @@
                     <div class="slds-form-element slds-p-bottom_medium">
                     <h2>
                         <span class="slds-text-heading_medium ">Schedules</span>
-                      
                     </h2>
                     </div>
                     <div class=" slds-form-element">
@@ -312,7 +341,6 @@
                     <div class="slds-form-element slds-p-bottom_medium slds-p-top_large">
                     <h2>
                         <span class="slds-text-heading_medium ">Regions & Locations</span>
-                      
                     </h2>
                     </div>
                     <div class=" slds-form-element ">
