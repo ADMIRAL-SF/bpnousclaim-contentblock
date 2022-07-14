@@ -1,9 +1,17 @@
 
 $(document).ready(function() {
-    $('.js-example-basic-single').select2({
+    
+   $('.js-example-basic-single').select2({
       placeholder: 'Select an option',
       width: '100%'
     });
+	
+   $("#start_date").datepicker();
+   $("#start_date").datepicker("option", "dateFormat", "yy-mm-dd");
+
+   $("input[name='valid_duration']").on('input', function(e) {
+      $(this).val($(this).val().replace(/[^0-9]/g, ''));
+   });
 
     var issuance = $('#issuance_schedule');
 
